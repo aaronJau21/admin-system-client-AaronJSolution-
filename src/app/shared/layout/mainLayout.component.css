@@ -1,6 +1,11 @@
 :host {
-  --sidebar-bg-color: #1a202c;
+  --sidebar-bg-color: #161b22;
   --sidebar-header-text-color: #ffffff;
+  --container-body: #f9fafb;
+}
+
+.list-item-side-bar {
+  color: white;
 }
 
 #side-bar {
@@ -8,4 +13,16 @@
   color: var(--sidebar-header-text-color);
   width: calc(var(--spacing) * 64);
   border-radius: 0;
+}
+
+#container-body {
+  background-color: var(--container-body);
+}
+
+#toolbar-continar {
+  background-color: var(--container-body);
+}
+
+#list-items {
+  color: #fff;
 }
