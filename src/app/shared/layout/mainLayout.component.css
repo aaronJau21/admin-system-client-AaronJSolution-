@@ -1,0 +1,11 @@
+:host {
+  --sidebar-bg-color: #1a202c;
+  --sidebar-header-text-color: #ffffff;
+}
+
+#side-bar {
+  background-color: var(--sidebar-bg-color);
+  color: var(--sidebar-header-text-color);
+  width: calc(var(--spacing) * 64);
+  border-radius: 0;
+}

@@ -1,0 +1,40 @@
+<div class="bg-[url(/auth/auth-login.webp)] h-screen bg-no-repeat bg-cover bg-center">
+  <div class="h-screen flex justify-center items-center">
+    <form
+      class="bg-[#0a0f1c]/80 backdrop-blur-lg p-10 rounded-2xl shadow-xl w-[400px] flex flex-col gap-y-6"
+      [formGroup]="loginForm"
+      (ngSubmit)="loginSubmit()"
+    >
+      <div class="flex justify-center">
+        <img src="/logo_blanco.webp" alt="Logo de AaronJ Solution" width="500" class="w-72" />
+      </div>
+      <p class="text-gray-400 text-sm text-center">Inicia sesión para continuar</p>
+
+      <mat-form-field appearance="fill" class="w-full rounded-lg">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" placeholder="ejemplo@correo.com" formControlName="email" />
+        <mat-icon matSuffix>mail</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="w-full rounded-lg">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" placeholder="••••••••" formControlName="password" />
+        <mat-icon matSuffix>lock</mat-icon>
+      </mat-form-field>
+
+      <button
+        mat-flat-button
+        color="primary"
+        class="w-full py-3 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all"
+      >
+        Iniciar sesión
+      </button>
+
+      <div class="flex justify-between items-center mt-3 text-sm">
+        <a href="#" class="text-blue-400 hover:text-blue-300 hover:underline">
+          ¿Olvidaste tu contraseña?
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
