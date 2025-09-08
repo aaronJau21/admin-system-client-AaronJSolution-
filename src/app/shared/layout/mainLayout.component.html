@@ -2,10 +2,15 @@
   <!-- Sidebar -->
   <mat-sidenav #drawer mode="side" opened="true" id="side-bar">
     <img src="/logo_blanco.webp" alt="logo de AaronJ Solution" class="w-52" />
-    <div class="mt-5">
-      <mat-list>
-        <mat-list-item id="list-items">Inicio</mat-list-item>
-      </mat-list>
+    <div class="mt-1">
+      <nav class="sidebar-nav">
+        @for (route of routes(); track route.name) {
+        <a href="#" class="nav-item">
+          <mat-icon class="nav-icon">home</mat-icon>
+          <span class="nav-text">{{ route.name }}</span>
+        </a>
+        }
+      </nav>
     </div>
   </mat-sidenav>
 
