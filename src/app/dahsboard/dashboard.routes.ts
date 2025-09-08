@@ -6,6 +6,10 @@ const routes: Routes = [
     loadComponent: () => import('./home/homePage.component'),
   },
   {
+    path: 'client',
+    loadComponent: () => import('./client/clientPage.component'),
+  },
+  {
     path: '**',
     redirectTo: 'home',
     pathMatch: 'full',
