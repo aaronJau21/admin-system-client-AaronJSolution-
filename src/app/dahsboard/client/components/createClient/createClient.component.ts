@@ -32,18 +32,18 @@ export class CreateClientComponent {
 
   public createClientForm: FormGroup = this.fb.group({
     name: ['', [Validators.required]],
-    father_last_name: ['', [Validators.required]],
-    mother_last_name: ['', [Validators.required]],
+    last_name: ['', [Validators.required]],
     email: ['', [Validators.required, Validators.email]],
     phone: ['', [Validators.required]],
+    company_name: ['', [Validators.required]],
   });
 
   private validationMessages: Record<string, string> = {
     name: 'El nombre es obligatorio',
-    father_last_name: 'El apellido paterno es obligatorio',
-    mother_last_name: 'El apellido materno es obligatorio',
+    last_name: 'El apellido paterno es obligatorio',
     email: 'El correo no es válido',
     phone: 'El teléfono es obligatorio',
+    company_name: 'El nombre de la compañía es obligatorio',
   };
 
   private get controls() {

@@ -6,11 +6,11 @@ export interface IGetClientAll {
 export interface IClient {
   id: number;
   name: string;
-  father_last_name: string;
-  mother_last_name: string;
+  last_name: string;
   email: string;
   phone: string;
   state: string;
+  company_name: string;
 }
 
 export interface Meta {

@@ -26,8 +26,8 @@ export default class ClientPageComponent {
   public displayedColumns = signal<string[]>([
     'id',
     'name',
-    'father_last_name',
-    'mother_last_name',
+    'last_name',
+    'company_name',
     'email',
     'phone',
     'state',
@@ -48,7 +48,8 @@ export default class ClientPageComponent {
     const dialogRef = this.dialog.open(CreateClientComponent);
 
     dialogRef.afterClosed().subscribe((result) => {
-      if (result === true) { // Solo recarga si la operación fue exitosa
+      if (result === true) {
+        // Solo recarga si la operación fue exitosa
         this.clients.reload();
       }
     });

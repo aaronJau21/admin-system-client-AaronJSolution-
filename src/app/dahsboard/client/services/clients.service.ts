@@ -20,7 +20,6 @@ export class ClientsService {
     const url = `${this.api}/clients`;
     return this.http.post<IClient>(url, {
       ...data,
-      state: 'POTENCIAL',
     });
   }
 }
