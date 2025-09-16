@@ -22,4 +22,9 @@ export class ClientsService {
       ...data,
     });
   }
+
+  public updateStateClient(id: string, state: string): Observable<IClient> {
+    const url = `${this.api}/clients/state/${id}`;
+    return this.http.patch<IClient>(url, { state });
+  }
 }

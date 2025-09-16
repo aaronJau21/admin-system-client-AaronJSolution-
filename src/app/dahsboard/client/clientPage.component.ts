@@ -43,6 +43,19 @@ export default class ClientPageComponent {
     return this.clients.value()?.data ?? [];
   }
 
+  // Activation State Client
+  public onChangeStateClient = (id: string, state: string): void => {
+    const newState = state === 'ACTIVO' ? 'POTENCIAL' : 'ACTIVO';
+    this.clientsService.updateStateClient(id, newState).subscribe({
+      next: () => {
+        this.clients.reload();
+      },
+      error: (err) => {
+        console.error('Error updating client state:', err);
+      },
+    });
+  };
+
   // Dialogs
   openCreateClient(): void {
     const dialogRef = this.dialog.open(CreateClientComponent);
