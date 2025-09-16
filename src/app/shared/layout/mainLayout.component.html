@@ -5,11 +5,29 @@
     <div class="mt-1">
       <nav class="sidebar-nav">
         @for (route of routes(); track route.name) {
+        <!-- children -->
+        @if(route.children){
+        <mat-accordion id="acordion-mat">
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-icon class="nav-icon" [fontIcon]="route.icon"></mat-icon>
+              <mat-panel-title id="title-mat-acordion"> {{ route.name }} </mat-panel-title>
+            </mat-expansion-panel-header>
+            @for (children of route.children; track $index) {
+            <a [routerLink]="children.route" class="nav-item">
+              <mat-icon class="nav-icon" [fontIcon]="children.icon"></mat-icon>
+              <span class="nav-text">{{ children.name }}</span>
+            </a>
+            }
+          </mat-expansion-panel>
+        </mat-accordion>
+
+        } @else {
         <a [routerLink]="route.route" class="nav-item">
           <mat-icon class="nav-icon" [fontIcon]="route.icon"></mat-icon>
           <span class="nav-text">{{ route.name }}</span>
         </a>
-        }
+        } }
       </nav>
     </div>
   </mat-sidenav>

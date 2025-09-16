@@ -10,6 +10,10 @@ const routes: Routes = [
     loadComponent: () => import('./client/clientPage.component'),
   },
   {
+    path: 'project',
+    loadChildren: () => import('./projects/projects.routes'),
+  },
+  {
     path: '**',
     redirectTo: 'home',
     pathMatch: 'full',

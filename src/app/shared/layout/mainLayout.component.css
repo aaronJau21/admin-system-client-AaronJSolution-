@@ -7,6 +7,85 @@
   --spacing: 1rem;
 }
 
+#title-mat-acordion {
+  color: white;
+}
+#acordion-mat {
+  background-color: transparent;
+}
+
+#acordion-mat .mat-expansion-panel {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+#acordion-mat .mat-expansion-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  height: auto;
+}
+
+#acordion-mat .mat-expansion-panel-header .mat-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+#acordion-mat .mat-expansion-indicator {
+  display: none;
+}
+
+#acordion-mat .mat-expansion-panel-header:hover {
+  background-color: var(--nav-item-hover);
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+#acordion-mat .mat-expansion-panel-header::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: var(--nav-item-active);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+#acordion-mat .mat-expansion-panel-header:hover::before {
+  transform: scaleY(1);
+}
+
+#acordion-mat .mat-panel-title {
+  color: #fff !important;
+  font-weight: 500;
+  flex: 1;
+}
+
+#acordion-mat .nav-icon {
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+  color: #8b949e;
+  transition: color 0.3s ease;
+  order: -1;
+}
+
+#acordion-mat .mat-expansion-panel-header:hover .nav-icon {
+  color: #fff;
+}
+
 #side-bar {
   background-color: var(--sidebar-bg-color);
   color: var(--sidebar-header-text-color);
@@ -88,4 +167,3 @@
   flex: 1;
   font-weight: 500;
 }
-
